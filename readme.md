@@ -16,7 +16,7 @@ Tested on OS X 10.7.4 with Node.js 0.8.16
 
 1. The script prompts the user to enter a task:
 
-Task > Vocabulary
+`Task > Vocabulary`
 
 2. If the task exists it is simply logged with a timestamp (for example):
 
@@ -25,7 +25,9 @@ Task > Vocabulary
 otherwise a new prompt is shown:
 
 `Enter name of parent task > Japanese`
+
 `Enter name of parent task > Study`
+
 `Enter name of parent task >` "ENTER"  (no parent task, done)
 
 This records "Study/Japanese/Vocabulary" to a log file in gource format.
