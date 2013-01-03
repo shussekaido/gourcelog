@@ -4,10 +4,8 @@ var rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-var timestamp = Math.round(+new Date / 1000); // Unix timestamp in seconds
 var username  = process.env.USER; // get shell username
-//var symbol    = ''; // 'A' for 'added', 'M' for modified
-var color     = ''; // To be determined at runtime
+//var color     = ''; // Not implemented
 
 // Variables for config file
 var configData = [];
@@ -68,6 +66,7 @@ var buildPath = function(task, path, parent, symbol) {
 }
 
 var saveLog = function(path, symbol) {
+  var timestamp = Math.round(+new Date / 1000); // Unix timestamp in seconds
   // Remove first slash (for proper log format)
   var path = path.replace(/^\//, '');
   // Append entry to log (NB: color is not implemented)
@@ -94,7 +93,7 @@ var init = function() {
   } else {
     // or initialize new config file
     saveConfig(configData);
-    console.log('Initialized an new config:\n', configFile, '\n');
+    console.log('Initialized a new config:\n', configFile, '\n');
   }
 }();
 
